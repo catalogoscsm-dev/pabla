@@ -14,7 +14,29 @@
 <header class="hero">
   <div class="topbar">
     <div class="brand">
-      <div class="monogram" aria-hidden="true">LP</div>
+      <svg class="monogram" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <filter id="lpGlow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <clipPath id="lpShimmerClip">
+            <rect x="-16" y="0" width="14" height="56">
+              <animate attributeName="x" values="-16;62" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+            </rect>
+          </clipPath>
+        </defs>
+        <circle class="lp-ring" cx="28" cy="28" r="25.5" stroke="#E2A883" stroke-width="0.55" stroke-dasharray="2.2 3.8" opacity="0.5"/>
+        <polygon points="28,2.5 53.5,28 28,53.5 2.5,28" stroke="#E2A883" stroke-width="0.7" opacity="0.8"/>
+        <polygon points="28,9.5 46.5,28 28,46.5 9.5,28" stroke="#E2A883" stroke-width="0.35" opacity="0.35"/>
+        <circle cx="28" cy="2.5" r="1.5" fill="#E2A883"/>
+        <circle cx="53.5" cy="28" r="1.5" fill="#E2A883"/>
+        <circle cx="28" cy="53.5" r="1.5" fill="#E2A883"/>
+        <circle cx="2.5" cy="28" r="1.5" fill="#E2A883"/>
+        <text class="lp-glow-pulse" x="28" y="35" font-family="Marcellus, Georgia, serif" font-size="20" fill="#E2A883" text-anchor="middle">LP</text>
+        <text x="28" y="35" font-family="Marcellus, Georgia, serif" font-size="20" fill="#E2A883" text-anchor="middle" filter="url(#lpGlow)">LP</text>
+        <text clip-path="url(#lpShimmerClip)" x="28" y="35" font-family="Marcellus, Georgia, serif" font-size="20" fill="#FFE8D5" text-anchor="middle">LP</text>
+      </svg>
       <div class="brand-name">Letícia Pabla</div>
     </div>
     <nav class="topnav">
@@ -163,7 +185,29 @@
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <div class="brand">
-        <div class="monogram" aria-hidden="true">LP</div>
+        <svg class="monogram" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <filter id="lpGlow2" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b2"/>
+              <feMerge><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <clipPath id="lpShimmerClip2">
+              <rect x="-16" y="0" width="14" height="56">
+                <animate attributeName="x" values="-16;62" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+              </rect>
+            </clipPath>
+          </defs>
+          <circle class="lp-ring" cx="28" cy="28" r="25.5" stroke="#E2A883" stroke-width="0.55" stroke-dasharray="2.2 3.8" opacity="0.5"/>
+          <polygon points="28,2.5 53.5,28 28,53.5 2.5,28" stroke="#E2A883" stroke-width="0.7" opacity="0.8"/>
+          <polygon points="28,9.5 46.5,28 28,46.5 9.5,28" stroke="#E2A883" stroke-width="0.35" opacity="0.35"/>
+          <circle cx="28" cy="2.5" r="1.5" fill="#E2A883"/>
+          <circle cx="53.5" cy="28" r="1.5" fill="#E2A883"/>
+          <circle cx="28" cy="53.5" r="1.5" fill="#E2A883"/>
+          <circle cx="2.5" cy="28" r="1.5" fill="#E2A883"/>
+          <text class="lp-glow-pulse" x="28" y="35" font-family="Marcellus, Georgia, serif" font-size="20" fill="#E2A883" text-anchor="middle">LP</text>
+          <text x="28" y="35" font-family="Marcellus, Georgia, serif" font-size="20" fill="#E2A883" text-anchor="middle" filter="url(#lpGlow2)">LP</text>
+          <text clip-path="url(#lpShimmerClip2)" x="28" y="35" font-family="Marcellus, Georgia, serif" font-size="20" fill="#FFE8D5" text-anchor="middle">LP</text>
+        </svg>
         <div class="brand-name">Letícia Pabla</div>
       </div>
       <div class="footer-role">Consultora de Interiores e Projetos Exclusivos</div>

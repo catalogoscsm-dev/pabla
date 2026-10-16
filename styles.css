@@ -44,7 +44,12 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 
 .hero { background: var(--navy); color: var(--white); }
 .topbar { max-width: 1280px; margin: 0 auto; padding: 20px var(--gutter); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 14px; }
-.monogram { width: 46px; height: 46px; border: 1px solid var(--peach); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 17px; letter-spacing: .04em; color: var(--peach); }
+.monogram { width: 46px; height: 46px; flex-shrink: 0; transition: transform .4s cubic-bezier(.2,.8,.3,1); }
+.monogram:hover { transform: scale(1.1); }
+.lp-ring { transform-box: fill-box; transform-origin: center; animation: lpRingSpin 20s linear infinite; }
+.lp-glow-pulse { filter: blur(4px); opacity: 0.3; animation: lpGlowPulse 3s ease-in-out infinite; }
+@keyframes lpRingSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes lpGlowPulse { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.6; } }
 .brand-name { font-family: var(--serif); font-size: 18px; letter-spacing: .14em; text-transform: uppercase; }
 .topnav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px; }
 .topnav a { display: flex; align-items: center; gap: 8px; min-height: 44px; }
@@ -112,3 +117,54 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 
 .footer-white { color: var(--white); }
 .footer-line { min-height: 32px; display: flex; align-items: center; }
 .footer-link { display: flex; align-items: center; min-height: 44px; }
+
+/* ── Mobile — adaptação elegante (≤ 640px) ───────────────────────── */
+@media (max-width: 640px) {
+
+  /* Navegação */
+  .topbar { padding: 14px var(--gutter); gap: 8px 0; }
+  .brand-name { font-size: 15px; letter-spacing: .1em; }
+  .topnav { gap: 4px 16px; font-size: 13px; }
+  .topnav a { min-height: 40px; gap: 6px; }
+
+  /* Hero — copy empilhado sobre a foto */
+  .hero-copy { padding: clamp(32px, 7vw, 52px) var(--gutter); gap: 18px; }
+  .hero-lead { font-size: clamp(18px, 4.8vw, 22px); max-width: 100%; }
+  .hero-text { font-size: 16px; }
+  .hero-photo { min-height: 300px; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-actions .btn { justify-content: center; }
+  .hero-actions .lnk { justify-content: center; min-height: 44px; }
+  .hero-caption { font-size: 13px; padding: 10px 14px; }
+
+  /* Facts — grade de 2 colunas elegante */
+  .facts-inner { gap: 20px; padding: clamp(24px, 5vw, 40px) var(--gutter); }
+  .fact { flex: 1 1 calc(50% - 10px); }
+  .fact-num { font-size: clamp(30px, 8vw, 44px); }
+
+  /* Processo */
+  .steps { gap: 22px; }
+  .step { padding-top: 16px; gap: 10px; }
+  .step-num { font-size: 38px; }
+  .step p { font-size: 16px; }
+
+  /* Benefícios */
+  .benefits-grid { gap: 32px; }
+  .benefit-list li { padding: 16px 0; font-size: 17px; gap: 14px; }
+
+  /* Agendamento */
+  .booking-grid { gap: 32px; }
+  .booking-form { gap: 22px; }
+  .chip { font-size: 15px; min-height: 44px; padding: 0 16px; }
+  .preview { padding: 14px 16px; }
+  .preview-text { font-size: 15px; }
+  .booking-actions { gap: 10px; flex-direction: column; align-items: stretch; }
+  .booking-actions .btn { justify-content: center; }
+  .booking-alt { font-size: 15px; text-align: center; }
+
+  /* Footer */
+  .footer-grid { gap: 24px; }
+  .footer-brand { gap: 12px; }
+  .footer-role { font-size: 15px; }
+  .footer-col { font-size: 15px; gap: 6px; }
+}

@@ -64,6 +64,7 @@
     </div>
     <div class="hero-photo">
       <img src="assets/ef4700f893a9efb036c7f3ecaf941878.jpg" alt="Letícia Pabla sentada em um sofá bege no showroom da CSM Decor">
+      <div class="hero-photo-overlay" aria-hidden="true"></div>
       <div class="hero-caption">No showroom da CSM Decor, Campinas</div>
     </div>
   </div>
@@ -72,11 +73,11 @@
 <section class="facts">
   <div class="facts-inner">
     <div class="fact">
-      <div class="fact-num">30+ anos</div>
+      <div class="fact-num" data-count="30" data-after="+ anos">30+ anos</div>
       <div class="fact-label">de tradição em móveis e decoração de alto padrão</div>
     </div>
     <div class="fact">
-      <div class="fact-num">6.000 m²</div>
+      <div class="fact-num" data-count="6000" data-after=" m²" data-format="br">6.000 m²</div>
       <div class="fact-label">de showroom com as melhores marcas reunidas em um só lugar</div>
     </div>
     <div class="fact">
@@ -88,22 +89,23 @@
 
 <section class="process">
   <div class="wrap stack-lg">
-    <div class="heading">
+    <div class="heading" data-reveal>
       <div class="eyebrow">Como funciona</div>
       <h2>Da primeira conversa à escolha certa</h2>
     </div>
+    <div class="ornament js-ornament" aria-hidden="true"><svg viewBox="0 0 320 20" fill="none" xmlns="http://www.w3.org/2000/svg"><line class="ornament__line" x1="0" y1="10" x2="138" y2="10" stroke="#D8DDE2" stroke-width="0.8"/><polygon points="160,2 168,10 160,18 152,10" fill="none" stroke="#B9C4CE" stroke-width="0.9"/><line class="ornament__line ornament__line--r" x1="182" y1="10" x2="320" y2="10" stroke="#D8DDE2" stroke-width="0.8"/></svg></div>
     <div class="steps">
-      <div class="step">
+      <div class="step" data-reveal>
         <div class="step-num">1</div>
         <h3>Conversa</h3>
         <p>Entendo como você vive, o que precisa e o que gosta antes de mostrar qualquer móvel.</p>
       </div>
-      <div class="step">
+      <div class="step" data-reveal data-reveal-delay="120">
         <div class="step-num">2</div>
         <h3>Seleção no showroom</h3>
         <p>Percorremos os 6.000 m² da CSM Decor com um filtro: só entra o que combina com o seu espaço e com a sua necessidade.</p>
       </div>
-      <div class="step">
+      <div class="step" data-reveal data-reveal-delay="240">
         <div class="step-num">3</div>
         <h3>Decisão com segurança</h3>
         <p>Orientação sobre materiais, acabamentos e fornecedores para você decidir sem dor de cabeça.</p>
@@ -114,29 +116,47 @@
 
 <section class="benefits">
   <div class="wrap benefits-grid">
-    <div class="heading benefits-head">
+    <div class="heading benefits-head" data-reveal>
       <div class="eyebrow">Atendimento personalizado</div>
       <h2>O que muda no seu projeto</h2>
     </div>
     <ul class="benefit-list">
-      <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Escolhas mais assertivas, sem desperdício</span></li>
-      <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Projetos exclusivos, alinhados ao seu gosto e à sua necessidade</span></li>
-      <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Orientação profissional na escolha de materiais, acabamentos e fornecedores</span></li>
-      <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Economia de tempo, de dinheiro e de dor de cabeça</span></li>
-      <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Ambientes planejados para serem práticos, bonitos e atemporais</span></li>
+      <li data-reveal><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Escolhas mais assertivas, sem desperdício</span></li>
+      <li data-reveal data-reveal-delay="80"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Projetos exclusivos, alinhados ao seu gosto e à sua necessidade</span></li>
+      <li data-reveal data-reveal-delay="160"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Orientação profissional na escolha de materiais, acabamentos e fornecedores</span></li>
+      <li data-reveal data-reveal-delay="240"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Economia de tempo, de dinheiro e de dor de cabeça</span></li>
+      <li data-reveal data-reveal-delay="320"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.7 2.7L16 9.5"></path></svg><span>Ambientes planejados para serem práticos, bonitos e atemporais</span></li>
     </ul>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap" data-reveal>
+    <div class="heading">
+      <div class="eyebrow">Portfólio</div>
+      <h2>Ambientes que transformam</h2>
+    </div>
+  </div>
+  <div class="ornament js-ornament" aria-hidden="true" style="padding-bottom:32px"><svg viewBox="0 0 320 20" fill="none" xmlns="http://www.w3.org/2000/svg"><line class="ornament__line" x1="0" y1="10" x2="138" y2="10" stroke="#E3E9EE" stroke-width="0.8"/><polygon points="160,2 168,10 160,18 152,10" fill="none" stroke="#D8DDE2" stroke-width="0.9"/><line class="ornament__line ornament__line--r" x1="182" y1="10" x2="320" y2="10" stroke="#E3E9EE" stroke-width="0.8"/></svg></div>
+  <div class="gallery-track" id="galleryTrack">
+    <div class="gallery-item gallery-item--1"></div>
+    <div class="gallery-item gallery-item--2"></div>
+    <div class="gallery-item gallery-item--3"></div>
+    <div class="gallery-item gallery-item--4"></div>
+    <div class="gallery-item gallery-item--5"></div>
+    <div class="gallery-item gallery-item--6"></div>
   </div>
 </section>
 
 <section class="booking" id="briefing">
   <div class="wrap booking-grid">
-    <div class="booking-intro">
+    <div class="booking-intro" data-reveal>
       <div class="eyebrow eyebrow--accent">Agende sua consultoria</div>
       <h2>Conte o que você quer planejar</h2>
       <p>Marque as opções ao lado e a mensagem chega pronta no WhatsApp da Letícia. Se preferir, pode ir direto para a conversa.</p>
     </div>
 
-    <div class="booking-form">
+    <div class="booking-form" data-reveal data-reveal-delay="100">
       <div class="group" data-key="env">
         <div class="group-label">Ambiente</div>
         <div class="chips">
@@ -183,7 +203,7 @@
 
 <footer class="footer">
   <div class="wrap footer-grid">
-    <div class="footer-brand">
+    <div class="footer-brand" data-reveal>
       <div class="brand">
         <svg class="monogram" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>

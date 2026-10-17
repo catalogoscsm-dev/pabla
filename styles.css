@@ -44,7 +44,7 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 
 .hero { background: var(--navy); color: var(--white); display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
 .topbar { max-width: 1280px; margin: 0 auto; padding: 20px var(--gutter); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 14px; }
-.monogram { width: 46px; height: 46px; flex-shrink: 0; transition: transform .4s cubic-bezier(.2,.8,.3,1); }
+.monogram { width: 64px; height: 64px; object-fit: contain; flex-shrink: 0; transition: transform .4s cubic-bezier(.2,.8,.3,1); }
 .monogram:hover { transform: scale(1.1); }
 .lp-ring { transform-box: fill-box; transform-origin: center; animation: lpRingSpin 20s linear infinite; }
 .lp-glow-pulse { filter: blur(4px); opacity: 0.3; animation: lpGlowPulse 3s ease-in-out infinite; }

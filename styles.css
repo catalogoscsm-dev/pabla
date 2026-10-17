@@ -245,3 +245,19 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 
   .topbar .topnav { order: 2; justify-self: center; font-size: 11.5px; }
   .topinfo { display: none; }
 }
+
+/* Tablet/celular: foto livre no topo, texto abaixo */
+@media (max-width: 900px) {
+  .hero { min-height: 0; }
+  .topbar { position: absolute; top: 0; left: 0; right: 0; grid-template-columns: 1fr; justify-items: center; row-gap: 2px; padding: 12px var(--gutter); }
+  .topbar .brand { order: 1; }
+  .topbar .topnav { order: 2; justify-self: center; gap: 4px 18px; font-size: 11px; }
+  .topinfo { display: none; }
+  .hero-grid { flex-direction: column; align-items: stretch; min-height: 0; }
+  .hero-photo { position: relative; inset: auto; order: 1; height: clamp(380px, 68svh, 620px); }
+  .hero-photo img { object-position: 50% 35%; }
+  .hero-photo-overlay { background: linear-gradient(180deg, rgba(14,24,34,.7) 0%, rgba(14,24,34,0) 32%, rgba(29,48,66,0) 62%, var(--navy) 100%); }
+  .hero-copy { order: 2; max-width: none; margin-top: -56px; padding: 0 var(--gutter) 40px; gap: 14px; align-items: flex-start; }
+  .hero-copy h1, .hero-text, .hero-actions .lnk { display: none; }
+  .hero-lead { max-width: 24ch; }
+}

@@ -1,13 +1,11 @@
 (function () {
-  // Rastreio: pode ser sobrescrito com ?origem=Instagram na URL
-  var origem = new URLSearchParams(location.search).get('origem') || 'Panfleto';
   var base = 'https://wa.me/5519971357177?text=';
   var state = { env: '', style: '', when: '' };
 
   var preview = document.getElementById('preview');
   var send = document.getElementById('wa-send');
 
-  var quick = 'Olá, Letícia! Vi sua página e quero conversar sobre um projeto. (Origem: ' + origem + ')';
+  var quick = 'Olá, Letícia! Vi sua página e quero conversar sobre um projeto.';
   document.querySelectorAll('.js-wa-quick').forEach(function (a) {
     a.href = base + encodeURIComponent(quick);
   });
@@ -17,7 +15,6 @@
     if (state.env) parts.push('Ambiente: ' + state.env + '.');
     if (state.style) parts.push('Estilo: ' + state.style + '.');
     if (state.when) parts.push('Prazo: ' + state.when + '.');
-    parts.push('(Origem: ' + origem + ')');
     var full = parts.join(' ');
     preview.textContent = full;
     send.href = base + encodeURIComponent(full);

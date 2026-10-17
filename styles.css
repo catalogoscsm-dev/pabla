@@ -41,7 +41,7 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 
 .btn:hover { filter: brightness(1.12); }
 
 /* Hero */
-.hero { background: var(--navy); color: var(--white); display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
+.hero { position: relative; background: var(--navy); color: var(--white); display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
 .topbar { width: 100%; max-width: none; margin: 0; padding: 20px var(--gutter); display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 14px; }
 .monogram { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; transition: transform .4s cubic-bezier(.2,.8,.3,1); }
@@ -54,7 +54,7 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 
 .topnav { display: flex; flex-wrap: nowrap; margin-left: auto; align-items: center; gap: 8px 28px; font-size: 15px; }
 .topnav a { display: flex; align-items: center; gap: 8px; min-height: 44px; }
 
-.hero-grid { flex: 1; position: relative; display: flex; align-items: center; min-height: 480px; }
+.hero-grid { flex: 1; position: static; display: flex; align-items: center; min-height: 480px; }
 .hero-copy { position: relative; z-index: 1; max-width: 720px; padding: clamp(48px, 8vw, 96px) clamp(16px, 4vw, 64px); display: flex; flex-direction: column; gap: 24px; }
 .hero-copy .eyebrow { animation: heroReveal .8s cubic-bezier(.16,1,.3,1) .15s both; }
 .hero-copy h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 6vw, 84px); line-height: 1; text-wrap: balance; animation: heroReveal .9s cubic-bezier(.16,1,.3,1) .3s both; }
@@ -228,4 +228,20 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 
 @media (max-width: 640px) { @keyframes nameIn { from { opacity: 0; letter-spacing: .3em; transform: translateX(-10px); } to { opacity: 1; letter-spacing: .1em; transform: none; } } }
 @media (prefers-reduced-motion: reduce) {
   .logo-fx, .logo-fx .monogram, .logo-fx::before, .brand-name { animation: none; }
+}
+
+/* Header sobre a foto (estilo showroom) */
+.topbar { position: relative; z-index: 3; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; flex-wrap: nowrap; background: linear-gradient(180deg, rgba(14,24,34,.78), rgba(14,24,34,0)); }
+.topbar .topnav { margin: 0; justify-self: start; text-transform: uppercase; letter-spacing: .14em; font-size: 12.5px; font-weight: 500; }
+.topbar .brand { flex-direction: column; gap: 6px; justify-self: center; text-align: center; }
+.topbar .brand-name { font-size: 15px; }
+.topinfo { justify-self: end; text-align: right; text-transform: uppercase; letter-spacing: .14em; font-size: 12.5px; font-weight: 500; display: flex; flex-direction: column; gap: 4px; }
+.topinfo span { color: var(--peach); font-size: 11.5px; }
+.hero-photo { z-index: 0; }
+.hero-photo-overlay { background: linear-gradient(105deg, rgba(29,48,66,.94) 0%, rgba(29,48,66,.78) 38%, rgba(29,48,66,.4) 62%, rgba(29,48,66,.12) 100%); }
+@media (max-width: 640px) {
+  .topbar { grid-template-columns: 1fr; justify-items: center; row-gap: 4px; }
+  .topbar .brand { order: 1; }
+  .topbar .topnav { order: 2; justify-self: center; font-size: 11.5px; }
+  .topinfo { display: none; }
 }
